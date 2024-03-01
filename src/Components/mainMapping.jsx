@@ -7,9 +7,6 @@ export const MainMapping = ({ board, turn, winner, resetGame, updateBoard }) => 
     return (
         <main className="board">
             <h1>Tic Tac Toe</h1>
-            <button onClick={resetGame}>
-                Reiniciar
-            </button>
             <section className="game">
                 {
                     board.map((square, index) => {
@@ -25,6 +22,10 @@ export const MainMapping = ({ board, turn, winner, resetGame, updateBoard }) => 
                     })
                 }
             </section>
+            
+            <button onClick={resetGame}>
+                Reiniciar
+            </button>
 
             <section className="turn">
                 <Square isSelected={turn === TURNS.X}>
@@ -34,7 +35,6 @@ export const MainMapping = ({ board, turn, winner, resetGame, updateBoard }) => 
                     {TURNS.O}
                 </Square>
             </section>
-
             <ModalWinner winner={winner} resetGame={resetGame} />
         </main>
     )

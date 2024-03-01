@@ -6,7 +6,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-image: radial-gradient( circle 815px at 50% 0%,  rgba(2, 27, 95, 0.5) 0.2%, rgba(0,0,0,1) 100.2% );
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -31,13 +31,14 @@ body {
 
 .board {
   width: fit-content;
-  margin: 40px auto;
+  margin: 20% auto 0;
   text-align: center;
 }
 
 .board h1 {
   color: #eee;
-  margin-bottom: 16px;
+  margin-bottom: 28px;
+  font-size: 2.5rem;
 }
 
 .board button {
@@ -71,6 +72,8 @@ body {
   width: fit-content;
   position: relative;
   border-radius: 10px;
+
+  border: 4px solid #444;
 }
 
 .turn .square,
@@ -128,4 +131,13 @@ body {
   place-items: center;
   cursor: pointer;
   font-size: 48px;
+
+  transition: transform 0.2s ease-in-out;
+}
+
+.square:hover {
+  background: #aaaaaa15;
+  color: #eee;
+  border: 2px solid #eee;
+  transform: scale(1.03);
 }
